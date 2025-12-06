@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decent Apps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .app-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .gds-viewer-card:hover {
+            background: linear-gradient(rgb(31, 41, 55), rgb(31, 41, 55)) padding-box, linear-gradient(90deg, rgba(35,0,255,1) 0%, rgba(253,29,29,1) 58%, rgba(252,176,69,1) 100%) border-box;
+            border-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white antialiased">
+
+    <div class="container mx-auto px-4 py-12">
+        
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-300">
+                Decent Apps
+            </h1>
+            <p class="text-gray-400 text-lg">A collection of useful web applications.</p>
+        </header>
+
+        <main>
+            <!-- dApps Section -->
+            <section id="dapps">
+                <h2 class="text-3xl font-semibold mb-8 border-l-4 border-blue-400 pl-4">dApps</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    
+                    <!-- C# Online Compiler -->
+                    <a href="/BlazorApps/CSharpOnlineCompiler/" class="block group">
+                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-yellow-500">
+                            <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <!-- Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="yellow" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-200">C# Online Compiler</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">Compile and run C# code directly in your browser.</p>
+                        </div>
+                    </a>
+
+                    <!-- Decent Paste -->
+                    <a href="/BlazorApps/DecentPaste/" class="block group">
+                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-teal-500">
+                             <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <!-- Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-200">Decent Paste</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">A simple and secure way to share text snippets.</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Decent Diff -->
+                    <a href="/BlazorApps/DecentDiff/" class="block group">
+                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-purple-500">
+                            <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <!-- Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" />
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 2" d="M12 3v18" />
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7 8h2" />
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7 12h2" />
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M15 8h2" />
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M15 12h2" />
+                                    <path stroke="green" stroke-linecap="round" stroke-linejoin="round" d="M15 16h2" />
+                                    <path stroke="red" stroke-linecap="round" stroke-linejoin="round" d="M7 16h2" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-200">Decent Diff</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">Compare two pieces of text and highlight the differences.</p>
+                        </div>
+                    </a>
+
+                    <!-- Decent Chat -->
+                    <a href="/BlazorApps/DecentChat/" class="block group">
+                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-pink-500">
+                            <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <!-- Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-200">Decent Chat</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">A secure, peer-to-peer chat application.</p>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- Misc Apps Section -->
+            <section id="misc-apps" class="mt-20">
+                <h2 class="text-3xl font-semibold mb-8 border-l-4 border-green-400 pl-4">Misc Apps</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    
+                    <!-- GDS Viewer -->
+                    <a href="/BlazorApps/GDSViewer/" class="block group">
+                        <div class="app-card gds-viewer-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700">
+                            <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <!-- Icon -->
+                                 <img src="gds viewer icon-512.png" alt="GDS Viewer Icon" class="h-10 w-10"/>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-200">GDS Viewer</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">A viewer for GDSII layout files used in IC design.</p>
+                        </div>
+                    </a>
+
+                    <!-- Graph DB Viewer -->
+                    <a href="/BlazorApps/GraphDBViewer/" class="block group">
+                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-blue-500">
+                            <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <!-- Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" class="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" stroke-width="2">
+                                    <g transform="scale(1.59) translate(-16.6,-8.6)">
+                                        <g transform="rotate(-5)">
+                                            <!-- Graph edges -->
+                                            <line x1="20" y1="20" x2="40" y2="12" />
+                                            <line x1="20" y1="20" x2="30" y2="40" />
+                                            <line x1="40" y1="12" x2="60" y2="22" />
+                                            <line x1="40" y1="12" x2="50" y2="36" />
+                                            <line x1="30" y1="40" x2="50" y2="36" />
+                                            <line x1="60" y1="22" x2="50" y2="36" />
+                                            
+                                            <!-- Graph nodes -->
+                                            <circle cx="20" cy="20" r="4" fill="currentColor"/>
+                                            <circle cx="40" cy="12" r="4" fill="currentColor"/>
+                                            <circle cx="30" cy="40" r="4" fill="currentColor"/>
+                                            <circle cx="50" cy="36" r="4" fill="currentColor"/>
+                                            <circle cx="60" cy="22" r="4" fill="currentColor"/>
+                                        </g>
+
+                                        <!-- Eye -->
+                                        <g transform="translate(24,24) scale(0.7)">
+                                            <path d="M22 32c4-6 11-10 15-10s11 4 15 10c-4 6-11 10-15 10S26 38 22 32z" stroke="currentColor" fill="none"/>
+                                            <circle cx="37" cy="32" r="6" fill="currentColor"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-200">Graph DB Viewer</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">Visualize and interact with your graph databases.</p>
+                        </div>
+                    </a>
+					
+					<!-- Mesh Optimizer -->
+                    <a href="/BlazorApps/MeshOptimizer/" class="block group">
+                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-blue-300">
+                            <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <!-- Icon -->
+                                <img src="meshoptimizer logo transparent.png" alt="Mesh Optimizer Icon" style="width: 40px;"/>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-200">3D Mesh Optimizer</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">Simplify 3D geometries of .obj files.</p>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+        </main>
+        
+        <!-- About Section -->
+        <section id="about" class="mt-20">
+            <h2 class="text-3xl font-semibold mb-8 border-l-4 border-red-400 pl-4">About Decent Apps</h2>
+            <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+                <p class="text-gray-400 leading-relaxed">
+                    Decent Apps is a suite of web applications I built. Some of them are dApps with a focused on privacy, security, and decentralization.
+                    For example the C# Online Compiler runs entirely in your browser using WebAssembly, ensuring your code never leaves your device. Additionally it uses Gun.js(decentralized database) for storage and live sharing of code editor.
+                </p>
+                <p class="text-gray-400 leading-relaxed mt-4">
+                    All the applications are Blazor WebAssembly PWA(progressive web apps) that you can download/install so you can use them offline.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-20 pt-8 border-t border-gray-800">
+            <p class="text-gray-500">&copy; 2025 Decent Apps. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
