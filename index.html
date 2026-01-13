@@ -23,6 +23,10 @@
             background: linear-gradient(rgb(31, 41, 55), rgb(31, 41, 55)) padding-box, linear-gradient(90deg, rgba(35,0,255,1) 0%, rgba(253,29,29,1) 58%, rgba(252,176,69,1) 100%) border-box;
             border-color: transparent;
         }
+        .verilog-flow-card:hover {
+            background: linear-gradient(rgb(31, 41, 55), rgb(31, 41, 55)) padding-box, linear-gradient(90deg, rgb(56, 189, 248), rgb(99, 102, 241)) border-box;
+            border-color: transparent;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white antialiased">
@@ -44,7 +48,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     
                     <!-- C# Online Compiler -->
-                    <a href="/BlazorApps/CSharpOnlineCompiler/" class="block group">
+                    <a href="/BlazorApps/CSharpOnlineCompiler/" target="_blank" rel="noopener noreferrer" class="block group">
                         <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-yellow-500">
                             <div class="bg-gray-700 p-4 rounded-full mb-4">
                                 <!-- Icon -->
@@ -58,7 +62,7 @@
                     </a>
 
                     <!-- Decent Paste -->
-                    <a href="/BlazorApps/DecentPaste/" class="block group">
+                    <a href="/BlazorApps/DecentPaste/" target="_blank" rel="noopener noreferrer" class="block group">
                         <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-teal-500">
                              <div class="bg-gray-700 p-4 rounded-full mb-4">
                                 <!-- Icon -->
@@ -72,7 +76,7 @@
                     </a>
                     
                     <!-- Decent Diff -->
-                    <a href="/BlazorApps/DecentDiff/" class="block group">
+                    <a href="/BlazorApps/DecentDiff/" target="_blank" rel="noopener noreferrer"class="block group">
                         <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-purple-500">
                             <div class="bg-gray-700 p-4 rounded-full mb-4">
                                 <!-- Icon -->
@@ -93,7 +97,7 @@
                     </a>
 
                     <!-- Decent Chat -->
-                    <a href="/BlazorApps/DecentChat/" class="block group">
+                    <a href="/BlazorApps/DecentChat/" target="_blank" rel="noopener noreferrer"class="block group">
                         <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-pink-500">
                             <div class="bg-gray-700 p-4 rounded-full mb-4">
                                 <!-- Icon -->
@@ -115,7 +119,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     
                     <!-- GDS Viewer -->
-                    <a href="/BlazorApps/GDSViewer/" class="block group">
+                    <a href="/BlazorApps/GDSViewer/" target="_blank" rel="noopener noreferrer" class="block group">
                         <div class="app-card gds-viewer-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700">
                             <div class="bg-gray-700 p-4 rounded-full mb-4">
                                 <!-- Icon -->
@@ -127,7 +131,7 @@
                     </a>
 
                     <!-- Graph DB Viewer -->
-                    <a href="/BlazorApps/GraphDBViewer/" class="block group">
+                    <a href="/BlazorApps/GraphDBViewer/" target="_blank" rel="noopener noreferrer" class="block group">
                         <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-blue-500">
                             <div class="bg-gray-700 p-4 rounded-full mb-4">
                                 <!-- Icon -->
@@ -164,7 +168,7 @@
                     </a>
 					
 					<!-- Mesh Optimizer -->
-                    <a href="/BlazorApps/MeshOptimizer/" class="block group">
+                    <a href="/BlazorApps/MeshOptimizer/" target="_blank" rel="noopener noreferrer" class="block group">
                         <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-blue-300">
                             <div class="bg-gray-700 p-4 rounded-full mb-4">
                                 <!-- Icon -->
@@ -175,6 +179,118 @@
                         </div>
                     </a>
 
+                    <!-- Verilog Flow -->
+                    <a href="https://verilogflow-logic-gate-designer-843674838026.us-west1.run.app/" target="_blank" rel="noopener noreferrer" class="block group">
+                        <div class="app-card verilog-flow-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700">
+                            <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <!-- Icon -->
+                                <svg
+                                    width="42"
+                                    height="42"
+                                    viewBox="0 0 128 128"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                    <defs>
+                                        <!-- Shared gradient spanning the whole symbol -->
+                                        <linearGradient
+                                        id="mainGradient"
+                                        x1="14"
+                                        y1="0"
+                                        x2="116"
+                                        y2="0"
+                                        gradientUnits="userSpaceOnUse"
+                                        >
+                                        <stop offset="0%" stop-color="rgb(56, 189, 248)" />
+                                        <stop offset="100%" stop-color="rgb(99, 102, 241)" />
+                                        </linearGradient>
+                                    </defs>
+
+                                    <!-- Gradient border -->
+                                    <rect
+                                        x="2"
+                                        y="2"
+                                        width="124"
+                                        height="124"
+                                        rx="20"
+                                        ry="20"
+                                        fill="none"
+                                        stroke="url(#mainGradient)"
+                                        stroke-width="4"
+                                    />
+
+                                    <!-- Background -->
+                                    <rect
+                                        x="6"
+                                        y="6"
+                                        width="116"
+                                        height="116"
+                                        rx="16"
+                                        ry="16"
+                                        fill="rgb(31, 41, 55)"
+                                    />
+
+                                    <!-- AND gate symbol (single entity) -->
+                                    <g
+                                        fill="url(#mainGradient)"
+                                        stroke="url(#mainGradient)"
+                                        stroke-width="4"
+                                    >
+                                        <!-- Left input 1 -->
+                                        <rect
+                                        x="14"
+                                        y="46"
+                                        width="22"
+                                        height="2"
+                                        />
+
+                                        <!-- Left input 2 -->
+                                        <rect
+                                        x="14"
+                                        y="78"
+                                        width="22"
+                                        height="2"
+                                        />
+
+                                        <!-- Right output -->
+                                        <rect
+                                        x="98"
+                                        y="62"
+                                        width="18"
+                                        height="2"
+                                        />
+
+                                        <!-- AND gate body -->
+                                        <path
+                                        d="
+                                            M36 28
+                                            L62 28
+                                            A36 36 0 0 1 62 100
+                                            L36 100
+                                            Z
+                                        "
+                                        fill="none"
+                                        />
+                                    </g>
+
+                                    <!-- VF text (shares same gradient space) -->
+                                    <text
+                                        x="65"
+                                        y="75"
+                                        text-anchor="middle"
+                                        font-size="28"
+                                        font-weight="700"
+                                        fill="url(#mainGradient)"
+                                        font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+                                    >
+                                        VF
+                                    </text>
+                                    </svg>
+
+                            </div>
+                           <h3 class="text-xl font-semibold text-gray-200">Verilog Flow</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">Generate Verilog from a schematic of logic gates.</p>
+                        </div>
+                    </a>
                 </div>
             </section>
         </main>
