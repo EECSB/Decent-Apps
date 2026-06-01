@@ -349,6 +349,43 @@
                             <p class="text-gray-400 mt-2 flex-grow">Generate class, method and variable diagrams for your C# code. Visualize code structure easily.</p>
                         </div>
                     </a>
+
+                    <!-- Image Compare -->
+                    <a href="https://eecs.blog/BlazorApps/ImageCompare/" target="_blank" rel="noopener noreferrer" class="block group">
+                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-[#c8b560]">
+                            <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Image compare icon">
+                                    <defs>
+                                        <clipPath id="leftHalf"><rect x="0" y="0" width="24" height="48" rx="6"/></clipPath>
+                                        <clipPath id="rightHalf"><rect x="24" y="0" width="24" height="48" rx="6"/></clipPath>
+                                    </defs>
+                                    <!-- dark background for contrast -->
+                                    <rect x="0" y="0" width="48" height="48" rx="8" fill="#111827"/>
+
+                                    <!-- left image (teal) -->
+                                    <g clip-path="url(#leftHalf)">
+                                        <rect x="4" y="6" width="20" height="36" rx="4" fill="#38BDF8"/>
+                                        <path d="M8 30 L14 18 L20 30 Z" fill="white"/>
+                                        <circle cx="18" cy="12" r="2.5" fill="white"/>
+                                    </g>
+
+                                    <!-- right image (accent) -->
+                                    <g clip-path="url(#rightHalf)">
+                                        <rect x="24" y="6" width="20" height="36" rx="4" fill="#F25958"/>
+                                        <path d="M28 30 L34 18 L40 30 Z" fill="white"/>
+                                        <circle cx="38" cy="12" r="2.5" fill="white"/>
+                                    </g>
+
+                                    <!-- divider / slider -->
+                                    <rect x="22" y="6" width="4" height="36" rx="2" fill="white"/>
+                                    <circle cx="24" cy="24" r="3" fill="#111827" stroke="white" stroke-width="0.6"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-200">Image Compare</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">Compare images side-by-side with adjustable opacity and zoom features.</p>
+                        </div>
+                    </a>
+
                 </div>
             </section>
         </main>
