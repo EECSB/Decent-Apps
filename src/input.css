@@ -1,0 +1,5 @@
+/* Source for css/tailwind.css - build it with: npm run build:css
+   The generated file is what index.html actually loads; editing it directly gets overwritten. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -5,7 +5,11 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decent Apps</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Prebuilt from the classes used below (npm run build:css). The cdn.tailwindcss.com script this
+         replaces is Tailwind's Play CDN, which ships a compiler that regenerates the stylesheet in the
+         browser on every visit - half a megabyte of JavaScript to produce ~10 KB of CSS, and a flash of
+         unstyled content while it runs. Re-run the build after changing any class in this file. -->
+    <link rel="stylesheet" href="css/tailwind.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">

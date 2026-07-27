@@ -1,0 +1,5 @@
+node_modules/
+package-lock.json
+
+# css/tailwind.css is deliberately NOT ignored: the page is deployed by uploading this folder as-is,
+# so the generated stylesheet has to be committed or the live site loses all its styling.
