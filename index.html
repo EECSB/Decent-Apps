@@ -24,6 +24,17 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+        /* Deprecated apps still work, so they stay readable and clickable - just faded back so the
+           maintained sections read first. Restated rather than extended because this rule has to sit
+           after .app-card to win the transition shorthand, and the transform/shadow timings have to
+           survive that. Hovering brings the card back to full strength. */
+        .deprecated-card {
+            opacity: 0.5;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, opacity 0.2s ease-in-out;
+        }
+        .deprecated-card:hover {
+            opacity: 1;
+        }
         .gds-viewer-card:hover {
             background: linear-gradient(rgb(31, 41, 55), rgb(31, 41, 55)) padding-box, linear-gradient(90deg, rgba(35,0,255,1) 0%, rgba(253,29,29,1) 58%, rgba(252,176,69,1) 100%) border-box;
             border-color: transparent;
@@ -118,9 +129,9 @@
                 </div>
             </section>
 
-            <!-- Misc Apps Section -->
-            <section id="misc-apps" class="mt-20">
-                <h2 class="text-3xl font-semibold mb-8 border-l-4 border-green-400 pl-4">Misc Apps</h2>
+            <!-- Apps Section -->
+            <section id="apps" class="mt-20">
+                <h2 class="text-3xl font-semibold mb-8 border-l-4 border-green-400 pl-4">Apps</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     
                     <!-- GDS Viewer -->
@@ -184,9 +195,132 @@
                         </div>
                     </a>
 
+                    <!-- C# Code Diagram Generator -->
+                    <a href="https://eecs.blog/BlazorApps/CsharpCodeDiagramGenerator/" target="_blank" rel="noopener noreferrer" class="block group">
+                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-[#F25958]">
+                            <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <svg width="40" height="40" viewBox="0 0 270 270" xmlns="http://www.w3.org/2000/svg" fill="none">
+                                    <g>
+                                        <path id="svg_1" fill-opacity="0.8" fill="#f25958" d="m0,55l90,-40l0,200l-90,40l0,-200z"/>
+                                        <path id="svg_2" fill="#f27358" d="m90,15l90,40l0,200l-90,-40l0,-200z"/>
+                                        <path id="svg_3" fill-opacity="0.8" fill="#f25958" d="m180,55l90,-40l0,200l-90,40l0,-200z"/>
+                                        <text id="svg_4" font-size="90" font-weight="800" font-family="Segoe UI, Arial, sans-serif" fill="white" text-anchor="middle" dominant-baseline="middle" y="105.4" x="75.04">C#</text>
+                                        <line id="svg_5" stroke-width="10" stroke="white" y2="165" x2="135" y1="185" x1="45"/>
+                                        <line id="svg_6" stroke-width="10" stroke="white" y2="85" x2="210" y1="165" x1="135"/>
+                                        <line id="svg_7" stroke-width="10" stroke="white" y2="175" x2="225" y1="165" x1="135"/>
+                                        <circle id="svg_8" stroke-width="9" stroke="white" fill="#f25958" r="14" cy="185" cx="45"/>
+                                        <circle id="svg_9" stroke-width="9" stroke="white" fill="#f25958" r="14" cy="175" cx="225"/>
+                                        <circle id="svg_10" stroke-width="9" stroke="white" fill="#f25958" r="14" cy="165" cx="135"/>
+                                        <circle id="svg_11" stroke-width="9" stroke="white" fill="#f25958" r="14" cy="85" cx="210"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-200">C# Code Diagram Generator</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">Generate class, method and variable diagrams for your C# code. Visualize code structure easily.</p>
+                        </div>
+                    </a>
+
+                    <!-- Image Compare -->
+                    <a href="https://eecs.blog/BlazorApps/ImageCompare/" target="_blank" rel="noopener noreferrer" class="block group">
+                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-[#c8b560]">
+                            <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Image compare icon">
+                                    <defs>
+                                        <clipPath id="leftHalf"><rect x="0" y="0" width="24" height="48" rx="6"/></clipPath>
+                                        <clipPath id="rightHalf"><rect x="24" y="0" width="24" height="48" rx="6"/></clipPath>
+                                    </defs>
+                                    <!-- dark background for contrast -->
+                                    <rect x="0" y="0" width="48" height="48" rx="8" fill="#111827"/>
+
+                                    <!-- left image (teal) -->
+                                    <g clip-path="url(#leftHalf)">
+                                        <rect x="4" y="6" width="20" height="36" rx="4" fill="#38BDF8"/>
+                                        <path d="M8 30 L14 18 L20 30 Z" fill="white"/>
+                                        <circle cx="18" cy="12" r="2.5" fill="white"/>
+                                    </g>
+
+                                    <!-- right image (accent) -->
+                                    <g clip-path="url(#rightHalf)">
+                                        <rect x="24" y="6" width="20" height="36" rx="4" fill="#F25958"/>
+                                        <path d="M28 30 L34 18 L40 30 Z" fill="white"/>
+                                        <circle cx="38" cy="12" r="2.5" fill="white"/>
+                                    </g>
+
+                                    <!-- divider / slider -->
+                                    <rect x="22" y="6" width="4" height="36" rx="2" fill="white"/>
+                                    <circle cx="24" cy="24" r="3" fill="#111827" stroke="white" stroke-width="0.6"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-200">Image Compare</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">Compare images side-by-side with adjustable opacity and zoom features.</p>
+                        </div>
+                    </a>
+
+                    <!-- MealMap -->
+                    <a href="https://eecs.blog/BlazorApps/MealMap/" target="_blank" rel="noopener noreferrer" class="block group">
+                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-amber-500">
+                            <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <!-- Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-10 w-10">
+                                    <defs>
+                                        <linearGradient id="mmPin" x1="0" y1="0" x2="1" y2="1">
+                                            <stop offset="0" stop-color="#e8a33a"/>
+                                            <stop offset="1" stop-color="#c75d3c"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M16 1.5C9.6 1.5 4.5 6.6 4.5 13c0 8.6 11.5 17.5 11.5 17.5S27.5 21.6 27.5 13C27.5 6.6 22.4 1.5 16 1.5z" fill="url(#mmPin)"/>
+                                    <g stroke="#fff8f0" fill="none" stroke-linecap="round">
+                                        <path d="M10.6 5.6v4.6M13 5.6v4.6M15.4 5.6v4.6M10.6 10.2h4.8" stroke-width="1.6"/>
+                                        <path d="M13 10.7v10.3M20.6 11.4v9.6" stroke-width="2.6"/>
+                                    </g>
+                                    <ellipse cx="20.6" cy="8.4" rx="2.9" ry="3.8" fill="#fff8f0"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-200">MealMap</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">Plan meals on a drag-and-drop calendar, keep track of your pantry and get a shopping list that writes itself.</p>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- Desktop Apps Section -->
+            <section id="desktop-apps" class="mt-20">
+                <h2 class="text-3xl font-semibold mb-8 border-l-4 border-purple-400 pl-4">Desktop Apps</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+                    <!-- DiskPartUI -->
+                    <a href="https://github.com/EECSB/DiskPartUI" target="_blank" rel="noopener noreferrer" class="block group">
+                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-sky-500">
+                            <div class="bg-gray-700 p-4 rounded-full mb-4">
+                                <!-- Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-10 w-10 text-sky-400" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <!-- Drive enclosure -->
+                                    <rect x="5" y="2" width="14" height="20" rx="2.5"/>
+                                    <!-- Platter -->
+                                    <circle cx="12" cy="9.6" r="4.8" fill="currentColor" fill-opacity="0.15"/>
+                                    <circle cx="12" cy="9.6" r="1.2" fill="currentColor" stroke="none"/>
+                                    <!-- Actuator arm -->
+                                    <path d="M16.4 18.2 13.6 12.9" stroke-width="2"/>
+                                    <circle cx="16.4" cy="18.2" r="1.2" fill="currentColor" stroke="none"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-200">DiskPartUI</h3>
+                            <p class="text-gray-400 mt-2 flex-grow">A graphical front-end for the Windows diskpart tool. Manage disks, partitions and volumes without memorizing commands.</p>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- Deprecated Section -->
+            <section id="deprecated" class="mt-20">
+                <h2 class="text-3xl font-semibold mb-8 border-l-4 border-gray-500 pl-4">Deprecated</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
                     <!-- Verilog Flow -->
                     <a href="https://verilogflow-logic-gate-designer-843674838026.us-west1.run.app/" target="_blank" rel="noopener noreferrer" class="block group">
-                        <div class="app-card verilog-flow-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700">
+                        <div class="app-card verilog-flow-card deprecated-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700">
                             <div class="bg-gray-700 p-4 rounded-full mb-4">
                                 <!-- Icon -->
                                 <svg
@@ -299,7 +433,7 @@
 
                     <!-- Schematic2KiCad -->
                     <a href="https://schematic2kicad-843674838026.us-west1.run.app/" target="_blank" rel="noopener noreferrer" class="block group">
-                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-[#4f39f6]">
+                        <div class="app-card deprecated-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-[#4f39f6]">
                             <div class="bg-gray-700 p-4 rounded-full mb-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
                                     <!-- Background -->
@@ -326,113 +460,6 @@
                             </div>
                             <h3 class="text-xl font-semibold text-gray-200">Schematic2KiCad</h3>
                             <p class="text-gray-400 mt-2 flex-grow">Use AI to automatically extract components and connections from hand-drawn or printed schematic images. Export directly to .kicad_sch format.</p>
-                        </div>
-                    </a>
-
-                    <!-- C# Code Diagram Generator -->
-                    <a href="https://eecs.blog/BlazorApps/CsharpCodeDiagramGenerator/" target="_blank" rel="noopener noreferrer" class="block group">
-                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-[#F25958]">
-                            <div class="bg-gray-700 p-4 rounded-full mb-4">
-                                <svg width="40" height="40" viewBox="0 0 270 270" xmlns="http://www.w3.org/2000/svg" fill="none">
-                                    <g>
-                                        <path id="svg_1" fill-opacity="0.8" fill="#f25958" d="m0,55l90,-40l0,200l-90,40l0,-200z"/>
-                                        <path id="svg_2" fill="#f27358" d="m90,15l90,40l0,200l-90,-40l0,-200z"/>
-                                        <path id="svg_3" fill-opacity="0.8" fill="#f25958" d="m180,55l90,-40l0,200l-90,40l0,-200z"/>
-                                        <text id="svg_4" font-size="90" font-weight="800" font-family="Segoe UI, Arial, sans-serif" fill="white" text-anchor="middle" dominant-baseline="middle" y="105.4" x="75.04">C#</text>
-                                        <line id="svg_5" stroke-width="10" stroke="white" y2="165" x2="135" y1="185" x1="45"/>
-                                        <line id="svg_6" stroke-width="10" stroke="white" y2="85" x2="210" y1="165" x1="135"/>
-                                        <line id="svg_7" stroke-width="10" stroke="white" y2="175" x2="225" y1="165" x1="135"/>
-                                        <circle id="svg_8" stroke-width="9" stroke="white" fill="#f25958" r="14" cy="185" cx="45"/>
-                                        <circle id="svg_9" stroke-width="9" stroke="white" fill="#f25958" r="14" cy="175" cx="225"/>
-                                        <circle id="svg_10" stroke-width="9" stroke="white" fill="#f25958" r="14" cy="165" cx="135"/>
-                                        <circle id="svg_11" stroke-width="9" stroke="white" fill="#f25958" r="14" cy="85" cx="210"/>
-                                    </g>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-200">C# Code Diagram Generator</h3>
-                            <p class="text-gray-400 mt-2 flex-grow">Generate class, method and variable diagrams for your C# code. Visualize code structure easily.</p>
-                        </div>
-                    </a>
-
-                    <!-- Image Compare -->
-                    <a href="https://eecs.blog/BlazorApps/ImageCompare/" target="_blank" rel="noopener noreferrer" class="block group">
-                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-[#c8b560]">
-                            <div class="bg-gray-700 p-4 rounded-full mb-4">
-                                <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Image compare icon">
-                                    <defs>
-                                        <clipPath id="leftHalf"><rect x="0" y="0" width="24" height="48" rx="6"/></clipPath>
-                                        <clipPath id="rightHalf"><rect x="24" y="0" width="24" height="48" rx="6"/></clipPath>
-                                    </defs>
-                                    <!-- dark background for contrast -->
-                                    <rect x="0" y="0" width="48" height="48" rx="8" fill="#111827"/>
-
-                                    <!-- left image (teal) -->
-                                    <g clip-path="url(#leftHalf)">
-                                        <rect x="4" y="6" width="20" height="36" rx="4" fill="#38BDF8"/>
-                                        <path d="M8 30 L14 18 L20 30 Z" fill="white"/>
-                                        <circle cx="18" cy="12" r="2.5" fill="white"/>
-                                    </g>
-
-                                    <!-- right image (accent) -->
-                                    <g clip-path="url(#rightHalf)">
-                                        <rect x="24" y="6" width="20" height="36" rx="4" fill="#F25958"/>
-                                        <path d="M28 30 L34 18 L40 30 Z" fill="white"/>
-                                        <circle cx="38" cy="12" r="2.5" fill="white"/>
-                                    </g>
-
-                                    <!-- divider / slider -->
-                                    <rect x="22" y="6" width="4" height="36" rx="2" fill="white"/>
-                                    <circle cx="24" cy="24" r="3" fill="#111827" stroke="white" stroke-width="0.6"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-200">Image Compare</h3>
-                            <p class="text-gray-400 mt-2 flex-grow">Compare images side-by-side with adjustable opacity and zoom features.</p>
-                        </div>
-                    </a>
-
-                    <!-- MealMap -->
-                    <a href="https://eecs.blog/BlazorApps/MealMap/" target="_blank" rel="noopener noreferrer" class="block group">
-                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-amber-500">
-                            <div class="bg-gray-700 p-4 rounded-full mb-4">
-                                <!-- Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-10 w-10">
-                                    <defs>
-                                        <linearGradient id="mmPin" x1="0" y1="0" x2="1" y2="1">
-                                            <stop offset="0" stop-color="#e8a33a"/>
-                                            <stop offset="1" stop-color="#c75d3c"/>
-                                        </linearGradient>
-                                    </defs>
-                                    <path d="M16 1.5C9.6 1.5 4.5 6.6 4.5 13c0 8.6 11.5 17.5 11.5 17.5S27.5 21.6 27.5 13C27.5 6.6 22.4 1.5 16 1.5z" fill="url(#mmPin)"/>
-                                    <g stroke="#fff8f0" fill="none" stroke-linecap="round">
-                                        <path d="M10.6 5.6v4.6M13 5.6v4.6M15.4 5.6v4.6M10.6 10.2h4.8" stroke-width="1.6"/>
-                                        <path d="M13 10.7v10.3M20.6 11.4v9.6" stroke-width="2.6"/>
-                                    </g>
-                                    <ellipse cx="20.6" cy="8.4" rx="2.9" ry="3.8" fill="#fff8f0"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-200">MealMap</h3>
-                            <p class="text-gray-400 mt-2 flex-grow">Plan meals on a drag-and-drop calendar, keep track of your pantry and get a shopping list that writes itself.</p>
-                        </div>
-                    </a>
-
-                    <!-- DiskPartUI -->
-                    <a href="https://github.com/EECSB/DiskPartUI" target="_blank" rel="noopener noreferrer" class="block group">
-                        <div class="app-card bg-gray-800 rounded-xl p-6 h-full flex flex-col items-center text-center border-2 border-gray-700 hover:border-sky-500">
-                            <div class="bg-gray-700 p-4 rounded-full mb-4">
-                                <!-- Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-10 w-10 text-sky-400" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <!-- Drive enclosure -->
-                                    <rect x="5" y="2" width="14" height="20" rx="2.5"/>
-                                    <!-- Platter -->
-                                    <circle cx="12" cy="9.6" r="4.8" fill="currentColor" fill-opacity="0.15"/>
-                                    <circle cx="12" cy="9.6" r="1.2" fill="currentColor" stroke="none"/>
-                                    <!-- Actuator arm -->
-                                    <path d="M16.4 18.2 13.6 12.9" stroke-width="2"/>
-                                    <circle cx="16.4" cy="18.2" r="1.2" fill="currentColor" stroke="none"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl font-semibold text-gray-200">DiskPartUI</h3>
-                            <p class="text-gray-400 mt-2 flex-grow">A graphical front-end for the Windows diskpart tool. Manage disks, partitions and volumes without memorizing commands.</p>
                         </div>
                     </a>
 
